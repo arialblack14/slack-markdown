@@ -13,6 +13,7 @@ class CommandsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def command_params
-      params.permit(:text, :token, :user_id, :response_url)
+      params.permit(:text, :token, :user_id, :response_url, :team_id, :team_domain, :channel_id,
+                    :channel_name, :user_name, :command, :trigger_id)
     end
 end
