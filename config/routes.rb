@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'commands/create'
+  resources :commands, only: [:new, :create]
 end
