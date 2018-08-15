@@ -1,4 +1,6 @@
 require 'httparty'
+require 'redcarpet'
+require 'redcarpet/render_strip'
 
 class CommandWorker
   include HTTParty
@@ -7,9 +9,11 @@ class CommandWorker
 
   def perform(params)
     params = params.symbolize_keys
+    md = init_markdown
+
     message = {
-      text: "You just sent #{params[:text]}",
-      response_type: "in_channel"
+      text: md.render(params[:text]),
+      response_type: "ephemeral"
     }
     puts "----------------------------------------"
     puts "Message: ", params.inspect
@@ -18,6 +22,11 @@ class CommandWorker
         "Content-Type" => "application/json"
       }
     })
-
   end
+
+  private
+
+    def init_markdown
+      Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+    end
 end
