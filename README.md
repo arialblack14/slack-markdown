@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I tried to use markdown on Slack.
+Well guess what!?
 
-Things you may want to cover:
+It does not support it (they say so in their help page after all).
 
-* Ruby version
+But this repo can easily be used for creating a Slack app.
 
-* System dependencies
+First, you have to create an app on the Slack apps page.
+You can expose your localhost with either the `localtunnel` gem or `ngrok`.
+Although, I have use localtunnel before I tried ngrok and found it super-easy to setup.
 
-* Configuration
+Instal the app in a workplace of yours.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Then, run `bundle exec sidekiq`.
+And run `rails s`
