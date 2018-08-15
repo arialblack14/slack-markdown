@@ -44,3 +44,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sidekiq'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'httparty'
+gem 'redcarpet'

@@ -112,6 +112,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redcarpet (3.4.0)
     redis (3.3.5)
     ruby_dep (1.5.0)
     sidekiq (5.1.3)
@@ -151,6 +152,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.7)
   rails (~> 5.1.6)
+  redcarpet
   sidekiq
   spring
   spring-watcher-listen (~> 2.0.0)
